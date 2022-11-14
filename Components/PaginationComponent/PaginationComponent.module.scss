@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.pagination {
+    padding: 1em;
+
+    .page {
+        background: $lighterColor;
+        padding: 0.3em 0.6em;
+        margin-right: 0.4em;
+        cursor: pointer;
+
+        &.active {
+            background: $primary;
+            color: $darkColor;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

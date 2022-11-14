@@ -1,0 +1,17 @@
+@import '../variables';
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+  text-align: center;
+
+  .container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    @media (min-width: 992px) {
+      padding: 0 2rem;
+    }
+  }
+}

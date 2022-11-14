@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.callersComponent {
+    margin-top: 2em;
+
+    .tasks {
+        .task {
+            text-align: left;
+            background: $lighterColor;
+            padding: 1em 2em;
+            margin-bottom: 1.5em;
+            position: relative;
+
+            .date {
+                position: absolute;
+                right: 0;
+                color: $lightestColor;
+                font-size: 12px;
+                right: 10px;
+                top: 10px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './_variables';
+
+* {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include fluid-type($minWidth, $maxWidth, $minFont, $maxFont);
+  padding: 0;
+  margin: 0;
+  background: $darkColor;
+  color: $white;
+}
+
+a {
+  color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+  font-weight: 700;
+}
+
+header {
+  padding-bottom: 2em;
+  
+  img {
+    max-width: 300px;
+  }
+}
+
+form {
+  fieldset {
+      border: 0;
+      text-align: left;
+
+      label {
+          display: block;
+          padding-bottom: 0.5em;
+      }
+
+      select {
+          cursor: pointer;
+      }
+
+      input {
+        width: 50%;
+        margin-top: 0.5em;
+        padding: 0.5em;
+      }
+
+      select,
+      textarea {
+          width: 100%;
+          padding: 0.5em;
+      }
+
+      textarea {
+          height: 100px;
+      }
+  }
+}
+
+button {
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0;
+  padding: 0.8em 2em;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    transition: 0.3s all;
+  }
+
+  &.primary {
+    background: $primary;
+    color: $darkColor;
+    border: 1px solid $primary;
+
+    &:hover {
+      color: $primary;
+      background: $darkColor;
+    }
+  }
+}
