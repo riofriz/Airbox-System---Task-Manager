@@ -4,14 +4,14 @@ import { AnimatePresence } from 'framer-motion';
 import GlobalContext from '../Contexts/GlobalContext';
 import '../styles/globals.scss';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const [tasks, setTasks] = useState([]);
   const TasksMemo = useMemo(() => ({ tasks, setTasks }), [tasks]);
 
   return (
     <AnimatePresence exitBeforeEnter>
       <GlobalContext.Provider value={TasksMemo}>
-        <Component {...pageProps} />
+        <Component {...pageProps} key={router.route} />
       </GlobalContext.Provider>
     </AnimatePresence>
   );
@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
 MyApp.propTypes = {
   Component: PropTypes.any,
   pageProps: PropTypes.any,
+  router: PropTypes.any,
 };
 
 export default memo(MyApp);

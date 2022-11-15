@@ -22,5 +22,12 @@ of the interview.
 I did not have enough time during the weekend to create every single API endpoint described in the yaml file, but I am sure 
 this should be enough to showcase some level of understanding of the task.
 
+## How to start locally
+
+```bash
+yarn
+yarn dev
+```
+
 I hope I met expectations and I am looking forward to hear more from you.
 Fernando.
